@@ -3691,6 +3691,8 @@ Page Banner Area CSS
 .page-banner-content h2 {
   font-size: 48px;
   margin-bottom: 20px;
+  color: var(--paragraph-color);
+
 }
 .page-banner-content ul {
   padding-left: 0;
