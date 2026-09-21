@@ -1,0 +1,31 @@
+export default function TopBar() {
+  return (
+    <div className="top-bar-area d-none d-lg-block">
+      <div className="container-fluid">
+        <div className="row justify-content-center align-items-center">
+          <div className="col-lg-7 col-md-12">
+            <ul className="top-bar-information">
+              <li>
+                <i className="ri-mail-line"></i>
+                <a href="mailto:info@clean-cleaning.com">info@clean-cleaning.com</a>
+              </li>
+              <li>
+                <i className="ri-time-line"></i>
+                Monday - Saturday: 8 AM - 8 PM
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-lg-5 col-md-12">
+            <ul className="top-bar-action-list">
+              <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="ri-facebook-line"></i></a></li>
+              <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i className="ri-twitter-fill"></i></a></li>
+              <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i className="ri-instagram-fill"></i></a></li>
+              <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i className="ri-linkedin-fill"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
