@@ -1,7 +1,19 @@
 import Hero from "@/sections/Hero";
-
-const services = [["ri-home-4-line", "Regular Cleaning", "Reliable recurring cleaning for homes, apartments, and offices."], ["ri-brush-2-line", "Deep Cleaning", "A detailed reset for high-use rooms, surfaces, and hard-to-reach areas."], ["ri-key-2-line", "Move-In / Move-Out", "A fresh start for tenants, homeowners, landlords, and property managers."]];
+import About from "@/sections/About";
+import WhatWeDo from "@/sections/WhatWeDo";
+import OurApproach from "@/sections/OurApproach";
+import Appointment from "@/sections/Appointment";
 
 export default function Home() {
-  return <><Hero /><section className="services-area bg-fefbf3 ptb-100"><div className="container"><div className="section-title"><span>What We Do</span><h2>Cleaning that fits your property and schedule</h2><p>Clean serves Edmonton and nearby communities with practical, dependable residential and commercial cleaning.</p></div><div className="row justify-content-center">{services.map(([icon, title, text]) => <div className="col-lg-4 col-md-6" key={title}><div className="single-services-card bg-f8f8f8"><div className="icon"><i className={icon}></i></div><h3><a href="/services">{title}</a></h3><p>{text}</p><a href="/services" className="services-btn"><i className="ri-arrow-right-line"></i></a></div></div>)}</div></div></section><section className="choose-us-area ptb-100"><div className="container"><div className="row align-items-center"><div className="col-lg-6"><div className="choose-us-content"><span>Our Approach</span><h3>Clear scope. Careful work. A quote that makes sense.</h3><p>We assess the property, service type, condition, timing, and access before recommending a suitable cleaning plan.</p><ul><li><i className="ri-check-line"></i> Residential and commercial options</li><li><i className="ri-check-line"></i> One-time or recurring visits</li><li><i className="ri-check-line"></i> Edmonton-area service</li></ul><a href="/contact" className="default-btn"><i className="ri-chat-1-line"></i> Get a quote</a></div></div><div className="col-lg-6"><div className="choose-us-image"><img src="/assets/images/choose-us/choose-1.png" alt="Cleaner preparing supplies" /></div></div></div></div></section></>;
+  return (
+    <>
+      <Hero />
+      <About/>
+      <WhatWeDo/>
+      <OurApproach/>
+      <Appointment/>
+     
+     
+    </>
+  );
 }
