@@ -7,19 +7,19 @@ export default function TopBar() {
             <ul className="top-bar-information">
               <li>
                 <i className="ri-mail-line"></i>
-                <a href="mailto:info@clean-cleaning.com">info@clean-cleaning.com</a>
+                <a href="mailto:780propertycleaners@gmail.com">780propertycleaners@gmail.com</a>
               </li>
               <li>
-                <i className="ri-time-line"></i>
-                Monday - Saturday: 8 AM - 8 PM
+                <i className="ri-phone-line"></i>
+                <a href="tel:7808519719">780-851-9719</a>
               </li>
             </ul>
           </div>
 
           <div className="col-lg-5 col-md-12">
             <ul className="top-bar-action-list">
-              <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="ri-facebook-line"></i></a></li>
-              <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i className="ri-instagram-fill"></i></a></li>
+              <li><a href="https://www.facebook.com/780propertycleaners" target="_blank" rel="noopener noreferrer"><i className="ri-facebook-line"></i></a></li>
+              <li><a href="https://www.instagram.com/780propertycleaners" target="_blank" rel="noopener noreferrer"><i className="ri-instagram-fill"></i></a></li>
             </ul>
           </div>
         </div>

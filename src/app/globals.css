@@ -440,3 +440,26 @@
     height: 38px;
   }
 }
+
+
+
+/* Active service sidebar item */
+.services-details-area .widget_service_categories .categories-list li.active > a,
+.services-details-area .widget_service_categories .categories-list li > a.active {
+  background-color: #2caac1 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  border-radius: 4px;
+}
+
+/* Active service text */
+.services-details-area .widget_service_categories .categories-list li.active > a span,
+.services-details-area .widget_service_categories .categories-list li > a.active span {
+  color: #ffffff !important;
+}
+
+/* Active service arrow */
+.services-details-area .widget_service_categories .categories-list li.active > a i,
+.services-details-area .widget_service_categories .categories-list li > a.active i {
+  color: #ffffff !important;
+}

@@ -6,9 +6,12 @@ import Pricing from "./pricing";
 export default function ServicesPage() {
   return (
     <>
-      <PageBanner title="Our Services" />
+      <PageBanner title="Our Cleaning Services" />
+
       <Services />
+
       <Pricing />
+
       <Faq />
     </>
   );

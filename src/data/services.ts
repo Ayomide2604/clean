@@ -2,96 +2,118 @@ export const services = [
   {
     slug: "regular-cleaning",
     title: "Regular Cleaning",
-    summary: "Reliable recurring cleaning for homes, apartments, and offices.",
+    image: "/assets/images/gallery/gallery-1.jpg",
+    summary:
+      "Reliable recurring cleaning for homes, apartments, offices, and other properties.",
     description:
-      "A routine cleaning visit keeps your space comfortable and manageable without adding another task to your week.",
+      "Our regular cleaning service helps keep your property clean, comfortable, and manageable without adding another task to your week. The service can be arranged as a one-time visit or on a recurring schedule.",
     included: [
       "Kitchen surface cleaning and general tidying",
       "Bathroom cleaning and sanitizing",
+      "Dusting of accessible surfaces",
       "Vacuuming and mopping of accessible floors",
-      "Dusting of reachable furniture and fixtures",
+      "General cleaning of common areas",
     ],
     bestFor:
-      "Homes, apartments, offices, and customers who want weekly, bi-weekly, monthly, or as-needed support.",
+      "Weekly, bi-weekly, monthly, or occasional cleaning for homes, apartments, offices, and other properties.",
   },
+
   {
     slug: "deep-cleaning",
     title: "Deep Cleaning",
+    image: "/assets/images/gallery/gallery-2.jpg",
     summary:
-      "A detailed reset for high-use rooms, surfaces, and hard-to-reach areas.",
+      "A more detailed clean for properties that need extra attention beyond routine maintenance.",
     description:
-      "Deep cleaning is for spaces that need more attention than a standard regular clean. We tailor the detail work to the condition of your property.",
+      "Deep cleaning is designed for spaces that need more attention than a standard regular clean. We focus on areas where dust, buildup, and accumulated dirt may require additional time and attention.",
     included: [
       "Detailed kitchen and bathroom cleaning",
-      "Extra attention to buildup and high-touch surfaces",
-      "Dusting of accessible vents, baseboards, and fixtures",
-      "Floor cleaning appropriate to the surface",
+      "Additional attention to buildup and high-touch areas",
+      "Dusting of accessible baseboards, fixtures, and other surfaces",
+      "Detailed floor cleaning",
+      "Extra attention to areas that may be missed during routine cleaning",
     ],
     bestFor:
-      "Seasonal resets, first-time visits, and properties that have not been professionally cleaned recently.",
+      "First-time professional cleaning, seasonal resets, or properties that require additional attention.",
   },
+
   {
     slug: "move-in-move-out-cleaning",
     title: "Move-In / Move-Out Cleaning",
+    image: "/assets/images/gallery/gallery-1.jpg",
     summary:
-      "A fresh start for tenants, homeowners, landlords, and property managers.",
+      "Detailed cleaning to help prepare a property for its next occupant.",
     description:
-      "A detailed cleaning plan for a property transition, based on the condition of the home and the requirements of the move.",
+      "Moving can leave plenty to take care of. Our move-in and move-out cleaning service helps prepare a property for a new occupant or leave it clean and presentable after a move.",
     included: [
-      "Kitchen and appliance exterior cleaning",
+      "Kitchen cleaning",
       "Bathroom cleaning and sanitizing",
-      "Interior cabinets and closets when empty and accessible",
-      "Vacuuming, mopping, dusting, and general presentation",
+      "Accessible cabinets and closets when empty",
+      "Dusting and surface cleaning",
+      "Vacuuming and mopping",
+      "General presentation cleaning",
     ],
     bestFor:
-      "Tenants, homeowners, landlords, property managers, and real-estate related moves.",
+      "Tenants, homeowners, landlords, property managers, and property transitions.",
   },
+
   {
     slug: "short-term-rental-cleaning",
     title: "Short-Term Rental Cleaning",
-    summary: "Between-guest resets that help your rental feel ready.",
+    image: "/assets/images/gallery/gallery-2.jpg",
+    summary:
+      "Reliable turnover cleaning to help your rental feel ready for the next guest.",
     description:
-      "A turnover clean helps short-term rentals stay consistent between guests. The scope can include a reset checklist unique to your property.",
+      "Our short-term rental cleaning service helps hosts prepare their properties between guests. The cleaning scope can be adapted to the needs of your property and turnover schedule.",
     included: [
-      "Bathroom and kitchen cleaning",
+      "Kitchen and bathroom cleaning",
       "Bedroom and living-area reset",
-      "Garbage removal and general tidying",
-      "Visual presentation check before the next guest",
+      "Vacuuming and mopping",
+      "Garbage removal",
+      "Surface cleaning and general tidying",
+      "Final presentation check",
     ],
     bestFor:
-      "Airbnb and short-term rental hosts who need reliable turnover support.",
+      "Airbnb and other short-term rental properties requiring reliable between-guest cleaning.",
   },
+
   {
     slug: "commercial-cleaning",
     title: "Commercial Cleaning",
+    image: "/assets/images/gallery/gallery-3.jpg",
     summary:
-      "Practical cleaning support for small offices, retail spaces, and facilities.",
+      "Practical cleaning support for offices, retail spaces, restaurants, and other commercial properties.",
     description:
-      "Commercial work is planned around access, business hours, required frequency, and the size of the space so the service is sustainable for everyone.",
+      "Commercial cleaning is planned around the needs of your business, including access, operating hours, cleaning frequency, and the size and use of the space.",
     included: [
-      "Common-area and workspace cleaning",
-      "Washroom cleaning and restocking as agreed",
-      "Accessible floor care and garbage removal",
-      "A recurring scope tailored to the facility",
+      "Workspace and common-area cleaning",
+      "Washroom cleaning and sanitizing",
+      "Floor cleaning",
+      "Garbage removal",
+      "Surface cleaning",
+      "Recurring cleaning schedules based on the property's needs",
     ],
     bestFor:
-      "Small offices, retail businesses, restaurants, property managers, and other small commercial spaces.",
+      "Small businesses, offices, retail spaces, restaurants, property managers, and other commercial facilities.",
   },
+
   {
     slug: "post-renovation-cleaning",
     title: "Post-Renovation Cleaning",
+    image: "/assets/images/gallery/gallery-4.jpg",
     summary:
-      "Cleaning dust, residue, and affected surfaces after renovation work.",
+      "Detailed cleaning after renovations, repairs, or construction work.",
     description:
-      "Post-renovation cleaning is a detailed service for spaces affected by construction or upgrades. Scope is assessed carefully before a quote is provided.",
+      "Renovation work can leave dust and residue throughout a property. Our post-renovation cleaning service focuses on accessible areas affected by the work and helps prepare the space for use.",
     included: [
-      "Removal of accessible dust and construction residue",
-      "Detailed cleaning of affected surfaces",
+      "Removal of accessible construction dust and residue",
+      "Cleaning of affected surfaces",
       "Vacuuming and mopping of accessible floors",
-      "Final presentation clean based on the completed work",
+      "Cleaning of accessible fixtures and surfaces",
+      "Final presentation cleaning",
     ],
     bestFor:
-      "Homes and commercial spaces following renovations, repairs, or construction projects.",
+      "Homes and commercial properties following renovations, repairs, or construction work.",
   },
 ] as const;
 

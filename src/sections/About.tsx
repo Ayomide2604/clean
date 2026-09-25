@@ -11,9 +11,13 @@ function About() {
               data-aos-duration={500}
               data-aos-once="true"
             >
-              <img src="assets/images/home-six/about.jpg" alt="image" />
+              <img
+                src="/assets/images/home-six/about.jpg"
+                alt="780 Property Cleaners"
+              />
             </div>
           </div>
+
           <div className="col-lg-6 col-md-12">
             <div
               className="six-about-content"
@@ -23,27 +27,38 @@ function About() {
               data-aos-once="true"
             >
               <span>About Us</span>
-              <h3>We Handle All Commercial Cleaning Services</h3>
+
+              <h3>Reliable Cleaning for Homes, Rentals &amp; Businesses</h3>
+
               <p>
-                Local operations team on-call 24 hours a day available to work
-                at a moment notice top quality cleaning that meets and exceed.
+                780 Property Cleaners provides practical, dependable cleaning
+                services for homes, apartments, short-term rentals, offices, and
+                commercial properties in Edmonton and surrounding areas. We
+                focus on understanding what your property needs and delivering a
+                clean, comfortable, and presentable space.
               </p>
+
               <div className="row justify-content-center">
                 <div className="col-lg-6 col-sm-6">
                   <div className="about-inner-card">
-                    <h4>Best Service &amp; Price</h4>
+                    <h4>Cleaning That Fits Your Property</h4>
+
                     <p>
-                      Vestibulum ac diam sit amet quam vehicula elementum sed
-                      sit amet dui proin.
+                      From regular cleaning to deep cleaning and move-in or
+                      move-out services, we tailor the scope to your property
+                      and the work required.
                     </p>
                   </div>
                 </div>
+
                 <div className="col-lg-6 col-sm-6">
                   <div className="about-inner-card">
-                    <h4>Visible Difference</h4>
+                    <h4>Clear &amp; Straightforward Service</h4>
+
                     <p>
-                      Vestibulum ac diam sit amet quam vehicula elementum sed
-                      sit amet dui proin.
+                      We confirm the cleaning scope before work begins and
+                      provide clear quotes based on the size, condition, and
+                      requirements of your property.
                     </p>
                   </div>
                 </div>

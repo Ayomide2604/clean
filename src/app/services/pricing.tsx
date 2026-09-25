@@ -4,40 +4,69 @@ export default function Pricing() {
       <div className="container">
         <div className="section-title">
           <span>How Pricing Works</span>
-          <h2>Simple customer quotes, sound internal planning</h2>
+
+          <h2>Clear quotes based on the work your property needs</h2>
+
           <p>
-            Most suitable jobs can be quoted as a flat rate after we understand
-            the scope. For uncertain or ongoing work, hourly pricing may be the
-            better fit.
+            Every property is different. We look at the size, condition, service
+            requested, access, and overall scope of the job before providing a
+            quote.
           </p>
         </div>
+
         <div className="row">
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-md-6">
             <div className="single-services-card">
-              <h3>1. Tell us about the job</h3>
+              <div className="icon">
+                <i className="ri-chat-3-line"></i>
+              </div>
+
+              <h3>1. Tell Us About Your Property</h3>
+
               <p>
-                Property size, condition, service needed, timing, and any
-                special requirements.
+                Share the property type, approximate size, cleaning service
+                needed, preferred date, and any specific requirements.
               </p>
             </div>
           </div>
-          <div className="col-lg-4">
+
+          <div className="col-lg-4 col-md-6">
             <div className="single-services-card">
-              <h3>2. We estimate the work</h3>
+              <div className="icon">
+                <i className="ri-search-eye-line"></i>
+              </div>
+
+              <h3>2. We Review the Scope</h3>
+
               <p>
-                We consider the cleaner-hours, supplies, access, travel, and
-                scope required.
+                We consider the condition of the property, areas requiring
+                attention, access, timing, and the work involved.
               </p>
             </div>
           </div>
-          <div className="col-lg-4">
+
+          <div className="col-lg-4 col-md-6">
             <div className="single-services-card">
-              <h3>3. You receive a clear quote</h3>
+              <div className="icon">
+                <i className="ri-file-list-3-line"></i>
+              </div>
+
+              <h3>3. Receive Your Quote</h3>
+
               <p>
-                We confirm the agreed scope and pricing before the work begins.
+                We provide a clear quote based on the agreed scope and confirm
+                what is included before the cleaning begins.
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="text-center mt-4">
+          <p>
+            <strong>Simple and transparent:</strong> Most suitable jobs can be
+            quoted at a flat rate. For certain ongoing or less predictable jobs,
+            hourly pricing may be more appropriate.
+          </p>
         </div>
       </div>
     </section>

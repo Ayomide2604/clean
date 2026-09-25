@@ -1,289 +1,129 @@
+"use client";
+
+import { useState } from "react";
+
+const faqs = [
+  {
+    question: "What areas do you serve?",
+    answer:
+      "780 Property Cleaners serves Edmonton and surrounding areas. Availability may depend on the location, service requested, and schedule.",
+  },
+  {
+    question: "Do you provide one-time cleaning?",
+    answer:
+      "Yes. We offer both one-time and recurring cleaning services depending on the type of cleaning you need.",
+  },
+  {
+    question: "Do you offer recurring cleaning?",
+    answer:
+      "Yes. Regular cleaning can be scheduled weekly, bi-weekly, monthly, or on an as-needed basis.",
+  },
+  {
+    question: "How do you price cleaning services?",
+    answer:
+      "Pricing depends on factors such as property size, condition, service type, scope of work, access, and timing. Most suitable jobs can be quoted at a flat rate after we understand the scope.",
+  },
+  {
+    question: "Do I need to provide cleaning supplies?",
+    answer:
+      "This depends on the agreed service and scope. Any specific supply requirements can be discussed when your service is arranged.",
+  },
+  {
+    question: "Can I request additional cleaning tasks?",
+    answer:
+      "Yes. Additional tasks can be requested before or during the service. If they fall outside the agreed scope, we will confirm any additional cost before proceeding.",
+  },
+  {
+    question: "Do you clean offices and commercial properties?",
+    answer:
+      "Yes. We provide commercial cleaning for small offices, retail spaces, restaurants, and other commercial properties.",
+  },
+  {
+    question: "Do you clean Airbnb or short-term rentals?",
+    answer:
+      "Yes. We provide between-guest cleaning and property resets for short-term rental hosts.",
+  },
+  {
+    question: "How do I book a cleaning?",
+    answer:
+      "You can request a quote through our website. Tell us about the property, the service you need, and your preferred timing, and we will get back to you with the next steps.",
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer: "At the moment, we accept cash and e-Transfer.",
+  },
+];
+
 export default function Faq() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const leftFaqs = faqs.slice(0, 5);
+  const rightFaqs = faqs.slice(5);
+
+  const renderFaq = (
+    faq: (typeof faqs)[number],
+    index: number,
+    offset: number,
+  ) => {
+    const actualIndex = index + offset;
+    const isOpen = openIndex === actualIndex;
+
+    return (
+      <div className="accordion-item" key={faq.question}>
+        <button
+          className={`accordion-button ${!isOpen ? "collapsed" : ""}`}
+          type="button"
+          onClick={() => setOpenIndex(isOpen ? null : actualIndex)}
+          aria-expanded={isOpen}
+        >
+          {faq.question}
+        </button>
+
+        <div className={`accordion-collapse collapse ${isOpen ? "show" : ""}`}>
+          <div className="accordion-body">
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div className="faq-area pt-100 pb-75">
+    <section className="faq-area pt-100 pb-75">
       <div className="container">
         <div className="section-title">
-          <span>FAQ</span>
-          <h2>You Can Learn More From Our Asked Questions</h2>
+          <span>Frequently Asked Questions</span>
+
+          <h2>Questions About Our Cleaning Services?</h2>
+
+          <p>
+            Here are some of the questions customers commonly ask before booking
+            a cleaning service.
+          </p>
         </div>
-        <div className="row align-items-center">
+
+        <div className="row align-items-start">
           <div className="col-lg-6 col-md-12">
             <div className="faq-accordion">
-              <div className="accordion" id="FaqAccordion">
-                <div className="accordion-item">
-                  <button
-                    className="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                  >
-                    How It Can Be Works?
-                  </button>
-                  <div
-                    id="collapseOne"
-                    className="accordion-collapse collapse show"
-                    data-bs-parent="#FaqAccordion"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Aenean sollicitudin lorem quis bibendum auctor nisi elit
-                        consequat nec lorem ipsum sagittis sem nibh id elit duis
-                        sed odio sit amet nibh vulputate cursus a sit amet
-                        doller sit amet mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo"
-                  >
-                    How Can I Get A Promo?
-                  </button>
-                  <div
-                    id="collapseTwo"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#FaqAccordion"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Aenean sollicitudin lorem quis bibendum auctor nisi elit
-                        consequat nec lorem ipsum sagittis sem nibh id elit duis
-                        sed odio sit amet nibh vulputate cursus a sit amet
-                        doller sit amet mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree"
-                    aria-expanded="false"
-                    aria-controls="collapseThree"
-                  >
-                    How Can I Order?
-                  </button>
-                  <div
-                    id="collapseThree"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#FaqAccordion"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Aenean sollicitudin lorem quis bibendum auctor nisi elit
-                        consequat nec lorem ipsum sagittis sem nibh id elit duis
-                        sed odio sit amet nibh vulputate cursus a sit amet
-                        doller sit amet mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour"
-                    aria-expanded="false"
-                    aria-controls="collapseFour"
-                  >
-                    Do You Offer Non-Disclosure Signature?
-                  </button>
-                  <div
-                    id="collapseFour"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#FaqAccordion"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Aenean sollicitudin lorem quis bibendum auctor nisi elit
-                        consequat nec lorem ipsum sagittis sem nibh id elit duis
-                        sed odio sit amet nibh vulputate cursus a sit amet
-                        doller sit amet mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive"
-                    aria-expanded="false"
-                    aria-controls="collapseFive"
-                  >
-                    Is Pay Later Available?
-                  </button>
-                  <div
-                    id="collapseFive"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#FaqAccordion"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Aenean sollicitudin lorem quis bibendum auctor nisi elit
-                        consequat nec lorem ipsum sagittis sem nibh id elit duis
-                        sed odio sit amet nibh vulputate cursus a sit amet
-                        doller sit amet mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="accordion">
+                {leftFaqs.map((faq, index) => renderFaq(faq, index, 0))}
               </div>
             </div>
           </div>
+
           <div className="col-lg-6 col-md-12">
             <div className="faq-accordion">
-              <div className="accordion" id="FaqAccordionTwo">
-                <div className="accordion-item">
-                  <button
-                    className="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseSix"
-                    aria-expanded="true"
-                    aria-controls="collapseSix"
-                  >
-                    Is This Safe For House?
-                  </button>
-                  <div
-                    id="collapseSix"
-                    className="accordion-collapse collapse show"
-                    data-bs-parent="#FaqAccordionTwo"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Aenean sollicitudin lorem quis bibendum auctor nisi elit
-                        consequat nec lorem ipsum sagittis sem nibh id elit duis
-                        sed odio sit amet nibh vulputate cursus a sit amet
-                        doller sit amet mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseSeven"
-                    aria-expanded="false"
-                    aria-controls="collapseSeven"
-                  >
-                    What Are My Options?
-                  </button>
-                  <div
-                    id="collapseSeven"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#FaqAccordionTwo"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Aenean sollicitudin lorem quis bibendum auctor nisi elit
-                        consequat nec lorem ipsum sagittis sem nibh id elit duis
-                        sed odio sit amet nibh vulputate cursus a sit amet
-                        doller sit amet mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseEight"
-                    aria-expanded="false"
-                    aria-controls="collapseEight"
-                  >
-                    What Should I Include In My Personal Statement?
-                  </button>
-                  <div
-                    id="collapseEight"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#FaqAccordionTwo"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Aenean sollicitudin lorem quis bibendum auctor nisi elit
-                        consequat nec lorem ipsum sagittis sem nibh id elit duis
-                        sed odio sit amet nibh vulputate cursus a sit amet
-                        doller sit amet mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseNine"
-                    aria-expanded="false"
-                    aria-controls="collapseNine"
-                  >
-                    Do You Offer Non-Disclosure Signature?
-                  </button>
-                  <div
-                    id="collapseNine"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#FaqAccordionTwo"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Aenean sollicitudin lorem quis bibendum auctor nisi elit
-                        consequat nec lorem ipsum sagittis sem nibh id elit duis
-                        sed odio sit amet nibh vulputate cursus a sit amet
-                        doller sit amet mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseTen"
-                    aria-expanded="false"
-                    aria-controls="collapseTen"
-                  >
-                    Do You Issue Refunds?
-                  </button>
-                  <div
-                    id="collapseTen"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#FaqAccordionTwo"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Aenean sollicitudin lorem quis bibendum auctor nisi elit
-                        consequat nec lorem ipsum sagittis sem nibh id elit duis
-                        sed odio sit amet nibh vulputate cursus a sit amet
-                        doller sit amet mauris.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="accordion">
+                {rightFaqs.map((faq, index) => renderFaq(faq, index, 5))}
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div className="faq-shape-1" data-speed="0.08" data-revert="true">
-        <img src="assets/images/faq-shape-1.png" alt="image" />
+        <img src="/assets/images/faq-shape-1.png" alt="" />
       </div>
-    </div>
+    </section>
   );
 }
