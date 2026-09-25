@@ -9,25 +9,17 @@ export default function ContactForm() {
           <h3>Cool Project? Get in Touch! Will Contact You Soon</h3>
           <ul className="action-list">
             <li>
-              <a href="https://www.facebook.com/" target="_blank">
+              <a href="https://www.facebook.com/780propertycleaners" target="_blank">
                 <i className="ri-facebook-line" />
               </a>
             </li>
+            
             <li>
-              <a href="https://twitter.com/" target="_blank">
-                <i className="ri-twitter-fill" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/" target="_blank">
+              <a href="https://www.instagram.com/780propertycleaners" target="_blank">
                 <i className="ri-instagram-fill" />
               </a>
             </li>
-            <li>
-              <a href="https://www.linkedin.com/" target="_blank">
-                <i className="ri-linkedin-fill" />
-              </a>
-            </li>
+           
           </ul>
         </div>
       </div>
