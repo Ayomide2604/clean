@@ -24,7 +24,7 @@ export default function OurApproach() {
                 </li>
               </ul>
               <a href="/contact" className="default-btn">
-                <i className="ri-chat-1-line"></i> Get a quote
+                <i className="ri-chat-1-line"></i> Contact Us Today
               </a>
             </div>
           </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -25,8 +27,7 @@ export default function Navbar() {
                   width={70}
                   height={50}
                   priority
-                style={{ transform: "scale(1.25)" }}
-
+                  style={{ transform: "scale(1.25)" }}
                 />
               </Link>
             </div>
@@ -37,9 +38,7 @@ export default function Navbar() {
       {/* Desktop Navbar */}
       <div className="main-navbar">
         <div className="container-fluid">
-          <nav
-            className="navbar navbar-expand-md navbar-light"
-          >
+          <nav className="navbar navbar-expand-md navbar-light">
             <Link className="navbar-brand" href="/" aria-label="Clean home">
               <Image
                 src="/logo.png"
@@ -63,6 +62,15 @@ export default function Navbar() {
                     </Link>
                   </li>
                 ))}
+                <li className="nav-item d-block d-md-none">
+                  <Link
+                    href="/quote"
+                    className="nav-link default-btn quote-mobile-btn d-inline-block"
+                  >
+                    <i className="ri-chat-1-line"></i>
+                    Request a Quote
+                  </Link>
+                </li>
               </ul>
 
               <div className="others-options d-flex align-items-center">
@@ -73,7 +81,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="option-item">
-                  <Link href="/contact" className="default-btn">
+                  <Link href="/quote" className="default-btn">
                     <i className="ri-chat-1-line"></i>
                     Request a Quote
                   </Link>

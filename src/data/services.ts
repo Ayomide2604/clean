@@ -115,7 +115,7 @@ export const services = [
     bestFor:
       "Homes and commercial properties following renovations, repairs, or construction work.",
   },
-] as const;
+];
 
 export function getService(slug: string) {
   return services.find((service) => service.slug === slug);

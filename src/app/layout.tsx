@@ -47,8 +47,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SearchOverlay/>
         {children}
         <Footer/>
-
-       
       </body>
       <TemplateScripts/>
     </html>
