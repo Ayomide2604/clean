@@ -105,7 +105,6 @@
 .portfolio-image {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
   width: 100%;
   border-radius: 8px;
 }
@@ -136,23 +135,75 @@
   opacity: 1;
 }
 
+/* Show View button on mobile */
+@media only screen and (max-width: 767px) {
+  .portfolio-hover-overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
 .portfolio-view-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 12px 22px;
-  background: #fff;
-  color: #222;
+  background: #2caac1;
+  color: #fff;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
   transition: all 0.3s ease;
   white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  font-family: var(--heading-font-family, "Laila", sans-serif);
 }
 
 .portfolio-view-btn:hover {
   transform: translateY(-2px);
+  background: #2590a5;
+}
+
+/* =========================================
+   COLLECTION INFO
+   ========================================= */
+
+.portfolio-collection-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+  z-index: 6;
+}
+
+.portfolio-collection-info h3 {
+  margin: 0 0 5px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--heading-font-family, "Laila", sans-serif);
+  color: #fff;
+}
+
+.portfolio-collection-info p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.portfolio-count-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(44, 170, 193, 0.9);
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
 }
 
 /* =========================================
@@ -168,6 +219,53 @@
   justify-content: center;
   padding: 30px;
   background: rgba(0, 0, 0, 0.94);
+}
+
+/* =========================================
+   CLICK HINT
+   ========================================= */
+
+.portfolio-click-hint {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: rgba(44, 170, 193, 0.95);
+  color: #fff;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--heading-font-family, "Laila", sans-serif);
+  z-index: 100002;
+  animation: fadeInOut 3s ease-in-out forwards;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-click-hint i {
+  font-size: 18px;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
 }
 
 .portfolio-lightbox-content {
@@ -212,6 +310,48 @@
 .portfolio-lightbox-close:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: rotate(90deg);
+}
+
+/* =========================================
+   NAVIGATION BUTTONS
+   ========================================= */
+
+.portfolio-nav-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100001;
+
+  width: 50px;
+  height: 50px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.portfolio-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.portfolio-nav-prev {
+  left: 30px;
+}
+
+.portfolio-nav-next {
+  right: 30px;
 }
 
 /* =========================================
@@ -260,6 +400,16 @@
 .before-after-switch button.active {
   background: #fff;
   color: #222;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+  }
 }
 
 /* =========================================
@@ -278,6 +428,21 @@
   height: calc(100% - 75px);
 
   margin-top: 65px;
+  transition: transform 0.2s ease;
+}
+
+.portfolio-lightbox-content {
+  position: relative;
+  width: min(1200px, 95vw);
+  height: min(850px, 90vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-lightbox-image:hover {
+  transform: scale(1.01);
 }
 
 .portfolio-lightbox-image img {
@@ -298,6 +463,31 @@
 
   padding: 7px 15px;
 
+  background: rgba(44, 170, 193, 0.9);
+  color: #fff;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--heading-font-family, "Laila", sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  z-index: 20;
+}
+
+/* =========================================
+   IMAGE COUNTER
+   ========================================= */
+
+.portfolio-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 7px 15px;
+
   background: rgba(0, 0, 0, 0.65);
   color: #fff;
 
@@ -306,10 +496,37 @@
   font-size: 12px;
   font-weight: 600;
 
-  text-transform: uppercase;
-  letter-spacing: 1px;
-
   z-index: 20;
+}
+
+/* =========================================
+   COLLECTION TITLE IN LIGHTBOX
+   ========================================= */
+
+.portfolio-collection-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  margin-top: 10px;
+  z-index: 20;
+}
+
+.portfolio-collection-title h2 {
+  margin: 0 0 5px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--heading-font-family, "Laila", sans-serif);
+  color: #fff;
+}
+
+.portfolio-collection-title p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* =========================================
@@ -357,6 +574,24 @@
     height: 40px;
 
     font-size: 22px;
+  }
+
+  /* -------------------------------
+     Navigation buttons
+     ------------------------------- */
+
+  .portfolio-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .portfolio-nav-prev {
+    left: 15px;
+  }
+
+  .portfolio-nav-next {
+    right: 15px;
   }
 
   /* -------------------------------
