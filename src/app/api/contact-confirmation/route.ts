@@ -143,7 +143,7 @@ export async function POST(request: Request) {
                 <strong>780 Property Cleaners</strong><br />
                 Edmonton &amp; Surrounding Areas<br />
                 Alberta, Canada<br />
-                780propertycleaners@gmail.com
+                clean@780propertycleaners.ca
               </p>
 
             </div>

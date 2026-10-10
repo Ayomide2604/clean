@@ -7,7 +7,7 @@ export default function TopBar() {
             <ul className="top-bar-information">
               <li>
                 <i className="ri-mail-line"></i>
-                <a href="mailto:780propertycleaners@gmail.com">780propertycleaners@gmail.com</a>
+                <a href="mailto:clean@780propertycleaners.ca">clean@780propertycleaners.ca</a>
               </li>
               <li>
                 <i className="ri-phone-line"></i>

@@ -110,8 +110,8 @@ export default function Footer() {
 
                 <li>
                   <span>Email:</span>{" "}
-                  <a href="mailto:780propertycleaners@gmail.com">
-                    780propertycleaners@gmail.com
+                  <a href="mailto:clean@780propertycleaners.ca">
+                    clean@780propertycleaners.ca
                   </a>
                 </li>
 

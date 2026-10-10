@@ -56,8 +56,8 @@ export default function ContactInfo() {
               <h3>Email Address</h3>
 
               <p>
-                <a href="mailto:780propertycleaners@gmail.com">
-                  780propertycleaners@gmail.com
+                <a href="mailto:clean@780propertycleaners.ca">
+                  clean@780propertycleaners.ca
                 </a>
               </p>
             </div>

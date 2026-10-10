@@ -265,7 +265,7 @@ export async function POST(request: Request) {
 
                   <br />
 
-                  780propertycleaners@gmail.com
+                  clean@780propertycleaners.ca
 
                 </p>
 
