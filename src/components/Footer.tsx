@@ -52,6 +52,17 @@ export default function Footer() {
                     <i className="ri-instagram-fill"></i>
                   </a>
                 </li>
+
+                <li>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Google Business Profile"
+                  >
+                    <i className="ri-google-fill"></i>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

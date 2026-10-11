@@ -150,6 +150,7 @@ export default async function ServiceDetailPage({
             "provider": {
               "@type": "LocalBusiness",
               "name": "780 Property Cleaners",
+              "logo": "https://780propertycleaners.ca/logo.png",
               "telephone": "+1 780 555 0142",
               "email": "clean@780propertycleaners.ca"
             },

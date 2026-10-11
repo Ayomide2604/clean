@@ -88,7 +88,8 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
             "description": post.excerpt,
             "author": {
               "@type": "Organization",
-              "name": "780 Property Cleaners"
+              "name": "780 Property Cleaners",
+              "logo": "https://780propertycleaners.ca/logo.png"
             },
             "publisher": {
               "@type": "Organization",

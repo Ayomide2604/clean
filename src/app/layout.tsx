@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: 'Professional residential and commercial cleaning services in Edmonton and surrounding areas.',
     images: [
       {
-        url: '/logo.png',
+        url: 'https://780propertycleaners.ca/logo.png',
         width: 1200,
         height: 630,
         alt: '780 Property Cleaners Logo',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '780 Property Cleaners | Professional Cleaning Services Edmonton',
     description: 'Professional residential and commercial cleaning services in Edmonton and surrounding areas.',
-    images: ['/logo.png'],
+    images: ['https://780propertycleaners.ca/logo.png'],
   },
 };
 
@@ -62,8 +62,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
 
       <head>
-        {/* <link rel="icon" type="image/png" href="/assets/images/favicon.png" /> - Favicon removed until logo decided */}
-        
+        <link rel="icon" href="/favicon/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <meta name="theme-color" content="#ffffff" />
+
         {/* CSS files from public/assets/css */}
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/aos.css" />
@@ -100,6 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "@type": "LocalBusiness",
             "name": "780 Property Cleaners",
             "image": "https://780propertycleaners.ca/logo.png",
+            "logo": "https://780propertycleaners.ca/logo.png",
             "telephone": "+1 780 555 0142",
             "email": "clean@780propertycleaners.ca",
             "address": {
