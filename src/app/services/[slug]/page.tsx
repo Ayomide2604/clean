@@ -3,11 +3,34 @@ import { notFound } from "next/navigation";
 
 import PageBanner from "@/components/PageBanner";
 import { getService, services } from "@/data/services";
+import type { Metadata } from "next";
+import Script from "next/script";
 
 export function generateStaticParams() {
   return services.map(({ slug }) => ({
     slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const service = getService(slug);
+
+  if (!service) {
+    return {
+      title: "Service Not Found",
+    };
+  }
+
+  return {
+    title: `${service.title} | 780 Property Cleaners`,
+    description: service.summary,
+    keywords: `${service.title.toLowerCase()}, cleaning services Edmonton, professional cleaning`,
+  };
 }
 
 export default async function ServiceDetailPage({
@@ -114,6 +137,29 @@ export default async function ServiceDetailPage({
           </div>
         </div>
       </section>
+
+      <Script
+        id={`service-schema-${slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": service.title,
+            "description": service.description,
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "780 Property Cleaners",
+              "telephone": "+1 780 555 0142",
+              "email": "clean@780propertycleaners.ca"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Edmonton"
+            }
+          })
+        }}
+      />
     </>
   );
 }

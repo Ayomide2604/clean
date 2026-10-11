@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://780propertycleaners.ca/sitemap.xml

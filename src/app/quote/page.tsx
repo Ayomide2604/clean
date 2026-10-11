@@ -3,9 +3,10 @@ import Footer from "@/components/Footer";
 import QuoteForm from "@/components/QuoteForm";
 
 export const metadata = {
-  title: "Request a Quote - 780 Property Cleaners",
+  title: "Get a Free Quote | 780 Property Cleaners",
   description:
-    "Get a free quote for professional cleaning services in Edmonton and surrounding areas.",
+    "Request a free quote for professional cleaning services in Edmonton. Fill out our quick form and receive a customized cleaning quote within 24 hours.",
+  keywords: "free cleaning quote, cleaning quote Edmonton, cleaning estimate, cleaning price",
 };
 
 export default function QuotePage() {
