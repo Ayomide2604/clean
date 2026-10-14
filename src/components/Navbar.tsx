@@ -46,7 +46,11 @@ export default function Navbar() {
                 width={140}
                 height={100}
                 priority
-                style={{ maxWidth: "60px", height: "auto", transform: "scale(1.2)" }}
+                style={{
+                  maxWidth: "60px",
+                  height: "auto",
+                  transform: "scale(1.2)",
+                }}
               />
             </Link>
 
