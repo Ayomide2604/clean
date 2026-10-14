@@ -3,11 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const SHOW_GALLERY = process.env.NEXT_PUBLIC_SHOW_GALLERY === "true";
+
 const navigation = [
   ["Home", "/"],
   ["About", "/about"],
   ["Services", "/services"],
-  ["Gallery", "/gallery"],
+  ...(SHOW_GALLERY ? [["Gallery", "/gallery"]] : []),
   ["Blog", "/blog"],
   ["Contact", "/contact"],
 ];
