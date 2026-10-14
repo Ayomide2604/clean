@@ -55,7 +55,7 @@ export default function Footer() {
 
                 <li>
                   <a
-                    href=""
+                    href="https://share.google/aXjd8WLar79W1qFYU"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Google Business Profile"

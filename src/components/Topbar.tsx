@@ -20,7 +20,7 @@ export default function TopBar() {
             <ul className="top-bar-action-list">
               <li><a href="https://www.facebook.com/780propertycleaners" target="_blank" rel="noopener noreferrer"><i className="ri-facebook-line"></i></a></li>
               <li><a href="https://www.instagram.com/780propertycleaners" target="_blank" rel="noopener noreferrer"><i className="ri-instagram-fill"></i></a></li>
-              <li><a href="" target="_blank" rel="noopener noreferrer"><i className="ri-google-fill"></i></a></li>
+              <li><a href="https://share.google/aXjd8WLar79W1qFYU" target="_blank" rel="noopener noreferrer"><i className="ri-google-fill"></i></a></li>
             </ul>
           </div>
         </div>
