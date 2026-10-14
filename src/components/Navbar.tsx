@@ -24,10 +24,10 @@ export default function Navbar() {
                 <Image
                   src="/logo.png"
                   alt="Clean"
-                  width={70}
-                  height={50}
+                  width={140}
+                  height={100}
                   priority
-                  style={{ transform: "scale(1.25)" }}
+                  style={{ maxWidth: "60px", height: "auto" }}
                 />
               </Link>
             </div>
@@ -43,10 +43,10 @@ export default function Navbar() {
               <Image
                 src="/logo.png"
                 alt="Clean"
-                width={60}
-                height={50}
+                width={140}
+                height={100}
                 priority
-                style={{ transform: "scale(1.4)" }}
+                style={{ maxWidth: "60px", height: "auto", transform: "scale(1.2)" }}
               />
             </Link>
 

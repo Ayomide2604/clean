@@ -32,11 +32,12 @@ export async function POST(request: Request) {
 
     if (!process.env.RESEND_API_KEY) {
       console.error("RESEND_API_KEY is missing.");
+      console.error("Please add RESEND_API_KEY to your .env.local file");
 
       return Response.json(
         {
           success: false,
-          error: "Email service is not configured.",
+          error: "Email service is not configured. Please contact support.",
         },
         { status: 500 },
       );
@@ -45,7 +46,7 @@ export async function POST(request: Request) {
     console.log("Sending confirmation email to:", email);
 
     const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "780 Property Cleaners <clean@780propertycleaners.ca>",
 
       to: [email],
 

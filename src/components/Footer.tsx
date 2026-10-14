@@ -15,10 +15,10 @@ export default function Footer() {
                   <Image
                     src="/logo.png"
                     alt="780 Property Cleaners"
-                    width={70}
-                    height={50}
+                    width={140}
+                    height={100}
                     priority
-                    style={{ transform: "scale(1.25)" }}
+                    style={{ maxWidth: "100px", height: "auto" }}
                   />
                 </Link>
               </div>

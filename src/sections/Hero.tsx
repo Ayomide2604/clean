@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   useEffect(() => {
@@ -47,19 +48,40 @@ export default function Hero() {
       <div className="six-slides-item">
         <div className="container-fluid">
           <div className="six-slides-content">
-            <h1>Professional Cleaning for Edmonton Homes &amp; Businesses</h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              Professional Cleaning for Edmonton Homes &amp; Businesses
+            </motion.h1>
 
-            <p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            >
               Reliable regular, deep, move-in/out, and short-term rental
               cleaning built around your property and schedule.
-            </p>
+            </motion.p>
 
-            <ul className="slides-btn">
+            <motion.ul
+              className="slides-btn"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            >
               <li>
-                <Link href="/quote" className="default-btn">
-                  <i className="ri-calendar-2-line"></i>
-                  Request a Quote
-                </Link>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  <Link href="/quote" className="default-btn">
+                    <i className="ri-calendar-2-line"></i>
+                    Request a Quote
+                  </Link>
+                </motion.div>
               </li>
 
               <li>
@@ -67,7 +89,7 @@ export default function Hero() {
                   Need Any Help? <a href="/contact">Contact Us</a>
                 </span>
               </li>
-            </ul>
+            </motion.ul>
           </div>
         </div>
       </div>
@@ -75,19 +97,40 @@ export default function Hero() {
       <div className="six-slides-item slides-bg-two">
         <div className="container-fluid">
           <div className="six-slides-content">
-            <h1>Cleaning Support for Every Stage of Your Property</h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              Cleaning Support for Every Stage of Your Property
+            </motion.h1>
 
-            <p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            >
               From routine upkeep to post-renovation and commercial cleaning,
               we tailor the scope of work to the job at hand.
-            </p>
+            </motion.p>
 
-            <ul className="slides-btn">
+            <motion.ul
+              className="slides-btn"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            >
               <li>
-                <Link href="/quote" className="default-btn">
-                  <i className="ri-calendar-2-line"></i>
-                  Request a Quote
-                </Link>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  <Link href="/quote" className="default-btn">
+                    <i className="ri-calendar-2-line"></i>
+                    Request a Quote
+                  </Link>
+                </motion.div>
               </li>
 
               <li>
@@ -95,7 +138,7 @@ export default function Hero() {
                   Need Any Help? <a href="/contact">Contact Us</a>
                 </span>
               </li>
-            </ul>
+            </motion.ul>
           </div>
         </div>
       </div>

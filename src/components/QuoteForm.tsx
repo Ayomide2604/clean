@@ -39,7 +39,9 @@ export default function QuoteForm() {
     if (selectedService === "other") {
       selectedServiceName = otherService;
     } else {
-      const service = servicesArray.find((s: any) => s.slug === selectedService);
+      const service = servicesArray.find(
+        (s: any) => s.slug === selectedService,
+      );
       selectedServiceName = service?.title || selectedService;
     }
 
@@ -87,10 +89,14 @@ export default function QuoteForm() {
 
       setStatus("success");
 
-      form.reset();
-      setSelectedService("");
-      setOtherService("");
-      setPropertyType("");
+      // Hide animation and reset form after 3 seconds
+      setTimeout(() => {
+        form.reset();
+        setSelectedService("");
+        setOtherService("");
+        setPropertyType("");
+        setStatus("idle");
+      }, 3000);
     } catch (error) {
       console.error("Quote submission error:", error);
       setStatus("error");
@@ -333,6 +339,84 @@ export default function QuoteForm() {
 
             <div className="clearfix" />
           </div>
+
+          {/* Success Animation Overlay */}
+          {status === "success" && (
+            <div
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: "rgba(0, 0, 0, 0.8)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 9999,
+                animation: "fadeIn 0.3s ease-in",
+              }}
+            >
+              <div
+                style={{
+                  backgroundColor: "white",
+                  padding: "60px 40px",
+                  borderRadius: "12px",
+                  textAlign: "center",
+                  animation: "scaleIn 0.5s ease-out",
+                }}
+              >
+                <div
+                  style={{
+                    width: "80px",
+                    height: "80px",
+                    margin: "0 auto 20px",
+                    borderRadius: "50%",
+                    backgroundColor: "#4CAF50",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    animation: "checkmark 0.6s ease-in-out",
+                  }}
+                >
+                  <i
+                    className="ri-check-line"
+                    style={{
+                      fontSize: "48px",
+                      color: "white",
+                    }}
+                  />
+                </div>
+                <h2
+                  style={{
+                    margin: "0 0 10px",
+                    color: "#333",
+                    fontSize: "28px",
+                  }}
+                >
+                  Thank You!
+                </h2>
+                <p
+                  style={{
+                    margin: "0",
+                    color: "#666",
+                    fontSize: "16px",
+                  }}
+                >
+                  Your quote request has been received.
+                </p>
+                <p
+                  style={{
+                    margin: "10px 0 0",
+                    color: "#999",
+                    fontSize: "14px",
+                  }}
+                >
+                  We'll get back to you within 24 hours.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </form>
     </div>

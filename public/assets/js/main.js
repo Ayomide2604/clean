@@ -696,9 +696,11 @@ function toggleTheme() {
 (function () {
     if (localStorage.getItem('drove_theme') === 'theme-dark') {
         setTheme('theme-dark');
-        document.getElementById('slider').checked = false;
+        const slider = document.getElementById('slider');
+        if (slider) slider.checked = false;
     } else {
         setTheme('theme-light');
-      document.getElementById('slider').checked = true;
+      const slider = document.getElementById('slider');
+      if (slider) slider.checked = true;
     }
 })();

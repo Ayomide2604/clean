@@ -1,5 +1,6 @@
 import { services } from "@/data/services";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const icons = [
   "ri-home-4-line",
@@ -31,11 +32,24 @@ export default function Services() {
 
         <div className="row justify-content-center">
           {services.map((service, index) => (
-            <div className="col-lg-4 col-md-6" key={service.slug}>
-              <div className="single-services-card bg-f8f8f8">
-                <div className="icon">
+            <motion.div
+              className="col-lg-4 col-md-6"
+              key={service.slug}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+            >
+              <motion.div
+                className="single-services-card bg-f8f8f8"
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              >
+                <motion.div
+                  className="icon"
+                  whileHover={{ rotate: 360, transition: { duration: 0.6 } }}
+                >
                   <i className={icons[index]}></i>
-                </div>
+                </motion.div>
 
                 <h3>
                   <Link href={`/services/${service.slug}`}>
@@ -45,15 +59,17 @@ export default function Services() {
 
                 <p>{service.summary}</p>
 
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="services-btn"
-                  aria-label={`Learn about ${service.title}`}
-                >
-                  <i className="ri-arrow-right-line"></i>
-                </Link>
-              </div>
-            </div>
+                <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="services-btn"
+                    aria-label={`Learn about ${service.title}`}
+                  >
+                    <i className="ri-arrow-right-line"></i>
+                  </Link>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
